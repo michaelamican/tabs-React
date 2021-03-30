@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Tab from './components/Tab/Tab';
+import Box from './components/Box/Box';
 
 function App() {
+  const [tabNum, setTabNum] = useState("");
+  const [active, setActive] = useState("");
+
+  const makeActive = (t) => {
+    setTabNum(t);
+    setActive(t);
+  }
+
+  const centerItem = {
+    padding: '1vw 1vh',
+    margin: '0 auto',
+    textAline: 'center'
+  }
+  
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div style= { centerItem }>
+            <Tab onSelect={ makeActive } />
+            <Box message={tabNum}/>
+      </div>
+      
+        
+
     </div>
   );
 }

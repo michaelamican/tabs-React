@@ -1,0 +1,7 @@
+.textBox {
+    width: 80vw;
+    padding: 30vh 0;
+    margin: 2vh auto;
+    text-align: center;
+    border: 1px solid black;
+}
