@@ -5,11 +5,9 @@ import Box from './components/Box/Box';
 
 function App() {
   const [tabNum, setTabNum] = useState("");
-  const [active, setActive] = useState("");
 
   const makeActive = (t) => {
     setTabNum(t);
-    setActive(t);
   }
 
   const centerItem = {
